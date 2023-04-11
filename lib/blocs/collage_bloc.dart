@@ -4,11 +4,12 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:image_collage_widget/model/images.dart';
-import 'package:image_collage_widget/utils/CollageType.dart';
-import 'package:image_collage_widget/utils/permission_type.dart';
+
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+import '../model/images.dart';
+import '../utils/CollageType.dart';
+import '../utils/permission_type.dart';
 import '../utils/permissions.dart';
 import 'collage_event.dart';
 import 'collage_state.dart';
@@ -78,7 +79,7 @@ class CollageBloc extends Bloc<CollageEvent, CollageState> {
             : ImageSource.camera);
 
     if (image != null) {
-      var imageList = (state as ImageListState).images;
+      List imageList = (state as ImageListState).images;
       imageList[index].imageUrl = File(image.path);
       add(ImageListEvent(imageList));
     }

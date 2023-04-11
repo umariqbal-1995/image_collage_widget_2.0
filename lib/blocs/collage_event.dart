@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:image_collage_widget/model/images.dart';
-import 'package:image_collage_widget/utils/permission_type.dart';
+
+import '../model/images.dart';
+import '../utils/permission_type.dart';
+
 
 abstract class CollageEvent extends Equatable {
   CollageEvent([List props = const []]) : super();
@@ -65,7 +67,7 @@ class DenyPermissionEvent extends CollageEvent {
 
 ///ImageList permission event
 class ImageListEvent extends CollageEvent {
-  final List<Images> imageList;
+  final List imageList;
 
   ImageListEvent(this.imageList);
 

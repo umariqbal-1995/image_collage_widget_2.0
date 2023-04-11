@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:image_collage_widget/model/images.dart';
+
+import '../model/images.dart';
+
 
 @immutable
 abstract class CollageState extends Equatable {
@@ -36,7 +38,7 @@ class LoadImageState extends CollageState {
 
 ///Image list state
 class ImageListState extends CollageState {
-  final List<Images> images;
+  final List images;
 
   ImageListState({
     required this.images,

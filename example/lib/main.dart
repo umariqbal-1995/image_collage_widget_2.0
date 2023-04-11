@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:image_collage_widget/utils/CollageType.dart';
 
 import 'src/screens/collage_sample.dart';
 import 'src/tranistions/fade_route_transition.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_collage_widget_updated/utils/CollageType.dart';
+
 
 void main() {
   BlocOverrides.runZoned(
@@ -113,3 +114,4 @@ class _MyHomePageState extends State<MyHomePage> {
     return RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0));
   }
 }
+

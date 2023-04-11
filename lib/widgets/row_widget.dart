@@ -10,7 +10,7 @@ import '../utils/CollageType.dart';
 import '../utils/permission_type.dart';
 
 class GridCollageWidget extends StatelessWidget {
-  var _imageList = <Images>[];
+  var _imageList = [];
   final CollageType _collageType;
   final CollageBloc _imageListBloc;
   BuildContext _context;
