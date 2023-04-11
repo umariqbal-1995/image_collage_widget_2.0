@@ -212,9 +212,11 @@ class CollageBloc extends Bloc<CollageEvent, CollageState> {
 
   ///Used to show message
   showSnackBar({String msg = "Permission Denied."}) {
-    Scaffold.of(context).showSnackBar(SnackBar(
-      content: Text(msg),
-      duration: Duration(milliseconds: 1000),
-    ));
+    const snackBar = SnackBar(
+      content: Text("Permission Denied"),
+
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
   }
 }

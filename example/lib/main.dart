@@ -57,10 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Widget buildRaisedButton(CollageType collageType, String text) {
-      return RaisedButton(
+      return ElevatedButton(
         onPressed: () => pushImageWidget(collageType),
-        shape: buttonShape(),
-        color: color,
+
+        style: ButtonStyle(
+            foregroundColor:MaterialStateProperty.all(Colors.white),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              buttonShape(),
+            )
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(text),
